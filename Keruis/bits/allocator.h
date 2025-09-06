@@ -33,7 +33,7 @@ public:
             }
             return static_cast<Tp_*>(operator new(n));
         }
-        return allocator_base<Tp_>::template allocate(n);
+        return allocator_base<Tp_>::allocate(n);
     }
 
     KLIB_ALWAYS_INLINE KLIB_CONSTEXPR
@@ -42,7 +42,7 @@ public:
             operator delete(p);
             return;
         }
-        allocator_base<Tp_>::template deallocate(p, n);
+        allocator_base<Tp_>::deallocate(p, n);
     }
 
     friend KLIB_ALWAYS_INLINE KLIB_CONSTEXPR

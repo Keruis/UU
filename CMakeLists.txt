@@ -16,7 +16,7 @@ file(GLOB KString
 )
 
 add_executable(UU
-	execute/main.cpp
+	test/cmakeTest.cpp
 	${bits}
 	${detail}
 	${KString}
