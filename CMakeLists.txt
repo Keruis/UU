@@ -4,22 +4,22 @@ project(UU)
 set(CMAKE_CXX_STANDARD 23)
 
 file(GLOB bits
-	"Bits/*.h"
+	"bits/*.h"
 )
 
 file(GLOB detail
-	"Detail/*.h"
+	"detail/*.h"
 )
 
 file(GLOB KString
-	"String/*.h"
+	"string/*.h"
 )
 
 add_executable(UU
 	test/cmakeTest.cpp
-	${Bits}
-	${Detail}
-	${String}
+	${bits}
+	${detail}
+	${string}
 )
 
 source_group("Include\\Bits" FILES ${bits})
